@@ -19,7 +19,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.QuestNavigasTugas_126.R
+import com.example.questnavigastugas_126.R
+
+
 
 val PurpleBg = Color(0xFFF3E5F5)
 val PurpleButton = Color(0xFFF3E5F5)
@@ -33,15 +35,18 @@ fun WelcomeScreen(
             .fillMaxSize()
             .background(PurpleBg)
             .padding(dimensionResource(R.dimen.padding_medium)),
-        horinzontalAlignment = Alignment.CenterHorizontally,
+        horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ){
         Text(
             text = stringResource(R.string.welcome_title),
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
-            color = purpleButton
+            color = PurpleButton
 
         )
+
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_large)))
+
     }
 }
