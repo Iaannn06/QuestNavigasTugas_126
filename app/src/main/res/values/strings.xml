@@ -6,4 +6,13 @@
     <string name="welcome_user_id">20230140126</string>
     <string name="button_submit">Submit</string>
 
+    <string name="form_title">Formulir Pendaftaran</string>
+    <string name="form_label_nama">NAMA LENGKAP</string>
+    <string name="form_placeholder_nama">Isian nama lengkap</string>
+    <string name="form_label_gender">JENIS KELAMIN</string>
+    <string name="form_label_status">STATUS PERKAWINAN</string>
+    <string name="form_label_alamat">ALAMAT</string>
+    <string name="form_placeholder_alamat">Alamat</string>
+
+
 </resources>
