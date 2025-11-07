@@ -54,7 +54,16 @@ fun FormIsian(
                 )
             )
         }
-    ) {
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(PurpleBgLight)
+                .padding(paddingValues)
+                .padding(dimensionResource(R.dimen.padding_medium)),
+            horizontalAlignment = Alignment.Start
+        ){
 
+        }
     }
 }
