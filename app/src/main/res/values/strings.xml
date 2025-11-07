@@ -4,6 +4,6 @@
     <string name="welcome_logo_subtitle">MOBILE APP 2025</string>
     <string name="welcome_user_name">M.Alfiansyah Azad</string>
     <string name="welcome_user_id">20230140126</string>
-
+    <string name="button_submit">Submit</string>
 
 </resources>
