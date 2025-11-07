@@ -61,5 +61,11 @@ fun WelcomeScreen(
             color = PurpleButton
         )
 
+        Text(
+            text = stringResource(R.string.welcome_logo_subtitle),
+            fontSize = 14.sp,
+            color = Color.Black
+        )
+
     }
 }
