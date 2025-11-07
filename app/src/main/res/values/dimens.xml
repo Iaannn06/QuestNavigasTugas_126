@@ -9,5 +9,6 @@
     <dimen name="spacer_large">32dp</dimen>
     <dimen name="spacer_xlarge">48dp</dimen>
 
-
+    <dimen name="button_height">50dp</dimen>
+    <dimen name="button_corner_radius">50dp</dimen>
 </resources>
