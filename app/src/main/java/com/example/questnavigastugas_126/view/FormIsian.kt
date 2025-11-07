@@ -160,4 +160,24 @@ fun FormLabel(text: String) {
     )
 }
 
+@Composable
+fun RadioButtonOption(text: String, selected: Boolean, onClick: () -> Unit) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .selectable(selected = selected, onClick = onClick)
+            .padding(vertical = dimensionResource(R.dimen.spacer_small)),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        RadioButton(
+            selected = selected,
+            onClick = onClick,
+            colors = RadioButtonDefaults.colors(selectedColor = PurpleButtonDark)
+        )
+        Spacer(modifier = Modifier.width(dimensionResource(R.dimen.padding_small)))
+        Text(text = text, color = Color.Black)
+    }
+}
+
+
 
