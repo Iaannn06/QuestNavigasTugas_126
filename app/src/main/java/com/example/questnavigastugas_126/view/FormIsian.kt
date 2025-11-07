@@ -21,3 +21,20 @@ val PurpleBgLight = Color(0xFFF3E5F5)
 val PurpleButtonDark = Color(0xFF8E24AA)
 val PurpleHeader = Color(0xFFAB47BC)
 
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun FormIsian(
+    viewModel: FormViewModel,
+    onSubmitBtnClick: () -> Unit
+){
+    val jenisKelaminOptions = listOf(
+        stringResource(R.string.gender_male),
+        stringResource(R.string.gender_female)
+    )
+    val statusPerkawinanOptions = listOf(
+        stringResource(R.string.status_widow),
+        stringResource(R.string.status_single),
+        stringResource(R.string.status_widower)
+    )
+
+}
