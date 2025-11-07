@@ -104,6 +104,15 @@ fun FormIsian(
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
+            FormLabel(text = stringResource(R.string.form_label_status))
+            statusPerkawinanOptions.forEach { option ->
+                RadioButtonOption(
+                    text = option,
+                    selected = uiState.statusPerkawinan == option,
+                    onClick = { viewModel.setStatusPerkawinan(option) }
+                )
+            }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
         }
     }
