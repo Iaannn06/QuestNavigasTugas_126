@@ -52,7 +52,14 @@ fun WelcomeScreen(
             painter = painterResource(id = R.drawable.ic_launcher_foreground),
             contentDescription = "Logo",
             modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
-
         )
+
+        Text(
+            text = stringResource(R.string.welcome_logo_name),
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = PurpleButton
+        )
+
     }
 }
