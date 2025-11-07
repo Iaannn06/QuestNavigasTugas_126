@@ -19,6 +19,10 @@ data class FormUiState(
             uiState = uiState.copy(nama = nama)
         }
 
+        fun setJenisKelamin(jenisKelamin: String) {
+            uiState = uiState.copy(jenisKelamin = jenisKelamin)
+        }
+
 
     }
 )
