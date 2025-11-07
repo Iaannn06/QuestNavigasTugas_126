@@ -78,6 +78,16 @@ fun FormIsian(
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
+            FormLabel(text = stringResource(R.string.form_label_gender))
+            jenisKelaminOptions.forEach { option ->
+                RadioButtonOption(
+                    text = option,
+                    selected = uiState.jenisKelamin == option,
+                    onClick = { viewModel.setJenisKelamin(option) }
+                )
+            }
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
+
         }
     }
 }
