@@ -17,14 +17,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.questnavigastugas_126.R
 
 
 
-val PurpleBg = Color(0xFFF3E5F5)
-val PurpleButton = Color(0xFFF3E5F5)
+
+private val PurpleBg = Color(0xFFF3E5F5)
+private val PurpleButton = Color(0xFF8E24AA)
 
 @Composable
 fun WelcomeScreen(
@@ -33,7 +33,7 @@ fun WelcomeScreen(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(PurpleBg)
+            .background(PurpleButton)
             .padding(dimensionResource(R.dimen.padding_medium)),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center

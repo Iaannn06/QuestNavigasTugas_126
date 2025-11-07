@@ -15,11 +15,10 @@ import androidx.compose.ui.unit.sp
 import com.example.questnavigastugas_126.R
 import com.example.questnavigastugas_126.viewmodel.FormViewModel
 
-val PurpleBgLight = Color(0xFFF3E5F5)
-val PurpleButtonDark = Color(0xFF8E24AA)
-val PurpleHeader = Color(0xFFAB47BC)
-val PurpleCard = Color(0xFFE1BEE7)
-
+private val PurpleBgLight = Color(0xFFF3E5F5)
+private val PurpleButtonDark = Color(0xFF8E24AA)
+private val PurpleHeader  = Color(0xFFAB47BC)
+private val PurpleCard = Color(0xFFE1BEE7)
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TampilData(

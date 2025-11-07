@@ -21,6 +21,8 @@ fun DataApp(
     // ViewModel di-inisialisasi di sini biar "shared"
     val viewModel: FormViewModel = viewModel()
 
+
+
     NavHost(
         navController = navController,
         startDestination = Navigasi.SelamatDatang.name
@@ -38,7 +40,7 @@ fun DataApp(
         composable(route = Navigasi.Formulir.name) {
             FormIsian(
                 viewModel = viewModel, // Kasih ViewModel
-                OnSubmitBtnClick = {
+                onSubmitBtnClick = {
                     navController.navigate(Navigasi.Detail.name)
                 }
             )

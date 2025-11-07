@@ -8,18 +8,18 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.questnavigastugas_126.R
 import com.example.questnavigastugas_126.viewmodel.FormViewModel
+import androidx.compose.ui.graphics.Color
 
-val PurpleBgLight = Color(0xFFF3E5F5)
-val PurpleButtonDark = Color(0xFF8E24AA)
-val PurpleHeader = Color(0xFFAB47BC)
+private val WhiteBg = Color(0xFFFFFFFF)
+private val PurpleButtonDark = Color(0xFF8E24AA)
+private val PurpleHeader = Color(0xFFAB47BC)
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,17 +56,18 @@ fun FormIsian(
         }
     ) { paddingValues ->
         Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(PurpleBgLight)
-                .padding(paddingValues)
-                .padding(dimensionResource(R.dimen.padding_medium)),
+            modifier = Modifier.run {
+                fillMaxSize()
+                        .background(WhiteBg)
+                        .padding(paddingValues)
+                        .padding(dimensionResource(R.dimen.padding_medium))
+            },
             horizontalAlignment = Alignment.Start
         ){
             FormLabel(text = stringResource(R.string.form_label_nama))
             OutlinedTextField(
                 value = uiState.nama,
-                onValueChange = { viewModel.setNama(it) },
+                onValueChange = { newValue -> viewModel.setNama(newValue) },
                 placeholder = { Text(stringResource(R.string.form_placeholder_nama)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
@@ -79,19 +80,7 @@ fun FormIsian(
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
 
-            FormLabel(text = stringResource(R.string.form_label_nama))
-            OutlinedTextField(
-                value = uiState.nama,
-                onValueChange = { viewModel.setNama(it) },
-                placeholder = { Text(stringResource(R.string.form_placeholder_nama)) },
-                modifier = Modifier.fillMaxWidth(),
-                singleLine = true,
-                shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
-                colors = OutlinedTextFieldDefaults.colors(
-                    focusedBorderColor = PurpleButtonDark,
-                    unfocusedBorderColor = Color.Gray
-                )
-            )
+
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
             FormLabel(text = stringResource(R.string.form_label_gender))
@@ -116,7 +105,7 @@ fun FormIsian(
 
             OutlinedTextField(
                 value = uiState.alamat,
-                onValueChange = { viewModel.setAlamat(it) },
+                onValueChange = { newValue -> viewModel.setAlamat(newValue) },
                 placeholder = { Text(stringResource(R.string.form_placeholder_alamat)) },
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true,
@@ -129,7 +118,7 @@ fun FormIsian(
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_large)))
 
             Button(
-                onClick = OnSubmitBtnClick,
+                onClick = onSubmitBtnClick,
                 modifier = Modifier
                     .fillMaxWidth()
                     .height(dimensionResource(R.dimen.button_height)),
