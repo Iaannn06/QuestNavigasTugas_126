@@ -20,5 +20,12 @@
     <string name="status_single">Lajang</string>
     <string name="status_widower">Duda</string>
 
-
+    <string name="detail_title">List Daftar Peserta</string>
+    <string name="detail_label_nama">NAMA LENGKAP</string>
+    <string name="detail_label_gender">JENIS KELAMIN</string>
+    <string name="detail_label_status">STATUS PERKAWINAN</string>
+    <string name="detail_label_alamat">ALAMAT</string>
+    <string name="detail_empty_value">-</string>
+    <string name="button_beranda">Beranda</string>
+    <string name="button_formulir">Formulir Pendaftaran</string>
 </resources>
