@@ -67,5 +67,9 @@ fun WelcomeScreen(
             color = Color.Black
         )
 
+        Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_xlarge)))
+
+
+
     }
 }
