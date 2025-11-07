@@ -63,6 +63,20 @@ fun FormIsian(
                 .padding(dimensionResource(R.dimen.padding_medium)),
             horizontalAlignment = Alignment.Start
         ){
+            FormLabel(text = stringResource(R.string.form_label_nama))
+            OutlinedTextField(
+                value = uiState.nama,
+                onValueChange = { viewModel.setNama(it) },
+                placeholder = { Text(stringResource(R.string.form_placeholder_nama)) },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = PurpleButtonDark,
+                    unfocusedBorderColor = Color.Gray
+                )
+            )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
         }
     }
