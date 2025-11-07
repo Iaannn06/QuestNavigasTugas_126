@@ -84,6 +84,22 @@ fun WelcomeScreen(
 
         Spacer(modifier = Modifier.weight(1f))
 
+        Button(
+            onClick = onSubmitClick,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(dimensionResource(R.dimen.button_height)),
+            shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner_radius)),
+            colors = ButtonDefaults.buttonColors(containerColor = PurpleButton)
+        ) {
+            Text(
+                text = stringResource(R.string.button_submit),
+                color = Color.White,
+                fontWeight = FontWeight.Bold,
+                fontSize = 16.sp
+            )
+        }
+
 
     }
 }
