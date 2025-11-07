@@ -27,6 +27,9 @@ data class FormUiState(
             uiState = uiState.copy(statusPerkawinan = status)
         }
 
+        fun setAlamat(alamat: String) {
+            uiState = uiState.copy(alamat = alamat)
+        }
 
 
     }
