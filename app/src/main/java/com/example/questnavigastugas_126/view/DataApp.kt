@@ -8,4 +8,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.questnavigastugas_126.viewmodel.FormViewModel
 
+enum class Navigasi {
+    SelamatDatang,
+    Formulir,
+    Detail
+}
 
