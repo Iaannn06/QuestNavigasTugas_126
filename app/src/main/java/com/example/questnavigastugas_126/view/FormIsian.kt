@@ -148,3 +148,16 @@ fun FormIsian(
         }
     }
 }
+
+@Composable
+fun FormLabel(text: String) {
+    Text(
+        text = text,
+        style = MaterialTheme.typography.labelMedium,
+        fontWeight = FontWeight.Bold,
+        color = Color.Black,
+        modifier = Modifier.padding(bottom = dimensionResource(R.dimen.spacer_small))
+    )
+}
+
+
