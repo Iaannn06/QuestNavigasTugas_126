@@ -114,6 +114,21 @@ fun FormIsian(
             }
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_medium)))
 
+            OutlinedTextField(
+                value = uiState.alamat,
+                onValueChange = { viewModel.setAlamat(it) },
+                placeholder = { Text(stringResource(R.string.form_placeholder_alamat)) },
+                modifier = Modifier.fillMaxWidth(),
+                singleLine = true,
+                shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedBorderColor = PurpleButtonDark,
+                    unfocusedBorderColor = Color.Gray
+                )
+            )
+            Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_large)))
+
+
         }
     }
 }
