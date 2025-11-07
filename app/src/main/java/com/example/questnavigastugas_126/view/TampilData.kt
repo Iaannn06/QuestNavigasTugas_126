@@ -117,3 +117,32 @@ fun TampilData(
         }
     }
 }
+
+@Composable
+fun DataDisplayItem(label: String, value: String) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(dimensionResource(R.dimen.card_corner_radius)),
+        colors = CardDefaults.cardColors(containerColor = PurpleCard)
+    ) {
+        Column(
+            modifier = Modifier.padding(
+                horizontal = dimensionResource(R.dimen.padding_medium),
+                vertical = 12.dp
+            )
+        ) {
+            Text(
+                text = label,
+                fontSize = 12.sp,
+                color = Color.Black,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = value.ifEmpty { stringResource(R.string.detail_empty_value) },
+                fontSize = 16.sp,
+                color = Color.Black
+            )
+        }
+    }
+}
+
