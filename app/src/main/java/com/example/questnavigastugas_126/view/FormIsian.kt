@@ -37,4 +37,24 @@ fun FormIsian(
         stringResource(R.string.status_widower)
     )
 
+    val uiState = viewModel.uiState
+
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        text = stringResource(R.string.form_title),
+                        fontWeight = FontWeight.Bold
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = PurpleHeader,
+                    titleContentColor = Color.White
+                )
+            )
+        }
+    ) {
+
+    }
 }
