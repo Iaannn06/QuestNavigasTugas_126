@@ -1,5 +1,6 @@
 package com.example.questnavigastugas_126.view
 
+import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 
 data class FormUiState(
@@ -11,6 +12,9 @@ data class FormUiState(
     )
 
     class FormViewModel : ViewModel() {
+        val uiState by mutableStateOf(FormUiState())
+            private set
+
 
     }
 )
