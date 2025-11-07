@@ -128,7 +128,23 @@ fun FormIsian(
             )
             Spacer(modifier = Modifier.height(dimensionResource(R.dimen.padding_large)))
 
-
+            Button(
+                onClick = OnSubmitBtnClick,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(dimensionResource(R.dimen.button_height)),
+                shape = RoundedCornerShape(dimensionResource(R.dimen.button_corner_radius)),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = PurpleButtonDark
+                )
+            ) {
+                Text(
+                    text = stringResource(R.string.button_submit),
+                    color = Color.White,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp
+                )
+            }
         }
     }
 }
