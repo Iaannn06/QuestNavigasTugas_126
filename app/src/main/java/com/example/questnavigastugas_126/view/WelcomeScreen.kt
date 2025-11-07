@@ -82,6 +82,8 @@ fun WelcomeScreen(
             textAlign = TextAlign.Center
         )
 
+        Spacer(modifier = Modifier.weight(1f))
+
 
     }
 }
