@@ -48,5 +48,11 @@ fun WelcomeScreen(
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_large)))
 
+        Image (
+            painter = painterResource(id = R.drawable.ic_launcher_foreground),
+            contentDescription = "Logo",
+            modifier = Modifier.size(dimensionResource(R.dimen.logo_size))
+
+        )
     }
 }
