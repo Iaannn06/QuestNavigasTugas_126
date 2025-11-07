@@ -15,6 +15,10 @@ data class FormUiState(
         val uiState by mutableStateOf(FormUiState())
             private set
 
+        fun SetNama(nama: String) {
+            uiState = uiState.copy(nama = nama)
+        }
+
 
     }
 )
