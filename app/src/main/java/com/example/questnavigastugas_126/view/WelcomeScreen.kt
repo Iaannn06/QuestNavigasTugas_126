@@ -69,6 +69,12 @@ fun WelcomeScreen(
 
         Spacer(modifier = Modifier.height(dimensionResource(R.dimen.spacer_xlarge)))
 
+        Text(
+            text = stringResource(R.string.welcome_user_name),
+            fontSize = 18.sp,
+            color = Color.Black,
+            textAlign = TextAlign.Center
+        )
 
 
     }
