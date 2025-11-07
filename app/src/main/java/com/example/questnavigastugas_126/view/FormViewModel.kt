@@ -23,6 +23,11 @@ data class FormUiState(
             uiState = uiState.copy(jenisKelamin = jenisKelamin)
         }
 
+        fun setStatusPerkawinan(status: String) {
+            uiState = uiState.copy(statusPerkawinan = status)
+        }
+
+
 
     }
 )
