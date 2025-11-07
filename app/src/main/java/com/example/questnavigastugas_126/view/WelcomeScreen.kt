@@ -75,6 +75,12 @@ fun WelcomeScreen(
             color = Color.Black,
             textAlign = TextAlign.Center
         )
+        Text(
+            text = stringResource(R.string.welcome_user_id),
+            fontSize = 16.sp,
+            color = Color.DarkGray,
+            textAlign = TextAlign.Center
+        )
 
 
     }
